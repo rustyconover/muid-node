@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import MemorableUniqueIdentifier from "../src";
+import { MemorableUniqueIdentifier } from "../src";
 
 describe("Memorable Unique Identifiers", () => {
   it("should extract the animal from a known valid key", () => {
