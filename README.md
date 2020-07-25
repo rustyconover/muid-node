@@ -5,7 +5,7 @@ A implementation of [Memorable Unique Identifiers](https://github.com/micropredi
 ## Installation
 
 ```
-npm install memorable-unique-identifiers
+npm install memorable-unique-identifier
 ```
 
 ## Usage
