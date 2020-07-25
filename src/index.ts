@@ -1,5 +1,4 @@
 // A javascript implementation of muid.
-const CORPUS: { [name: string]: [number, number] } = require("./animals.json");
 import crypto from "crypto";
 
 interface MinedKey {
@@ -9,7 +8,11 @@ interface MinedKey {
   hash: string;
 }
 
-export default class MemorableUniqueIdentifier {
+export class MemorableUniqueIdentifier {
+  private static readonly CORPUS: {
+    [name: string]: [number, number];
+  } = require("./animals.json");
+
   /**
    * Return the first 32 bytes a hex encoded string
    * @param key The key to hash (should be lowercase hex)
@@ -88,7 +91,7 @@ export default class MemorableUniqueIdentifier {
       const buf = crypto.randomBytes(16);
       const hashed = this.bhash(buf.toString("hex"));
 
-      const l = CORPUS[hashed.substr(0, difficulty)];
+      const l = this.CORPUS[hashed.substr(0, difficulty)];
       if (l != null) {
         // There is a match.
         results.push(this.report_finding(buf.toString("hex"), hashed, l));
@@ -120,7 +123,7 @@ export default class MemorableUniqueIdentifier {
   static search(code: string) {
     for (let k = 16; k > 5; k--) {
       const code_k = code.substr(0, k);
-      const lengths = CORPUS[code_k];
+      const lengths = this.CORPUS[code_k];
       if (lengths != null) {
         return this.pretty(code_k, ...lengths);
       }
