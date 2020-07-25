@@ -1,0 +1,30 @@
+{
+  "name": "memorable-unique-identifier",
+  "version": "1.0.1",
+  "description": "Memorable Unique Identifier",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "mocha -r ts-node/register test/test.ts",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rustyconover/muid-node.git"
+  },
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "author": "Rusty Conover",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.26",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {}
+}
