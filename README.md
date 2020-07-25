@@ -11,7 +11,7 @@ npm install memorable-unique-identifier
 ## Usage
 
 ```js
-import MemorableUniqueIdentifier from "memorable-unique-identifiers";
+import { MemorableUniqueIdentifier } from "memorable-unique-identifier";
 
 // Create a key of difficulty 6 this should
 // not take long at all.

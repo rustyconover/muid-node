@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf dist && tsc",
     "test": "mocha -r ts-node/register test/test.ts",
-    "prepublish": "tsc"
+    "prepublish": "tsc && npm run test"
   },
   "repository": {
     "type": "git",
