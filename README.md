@@ -18,6 +18,15 @@ import { MemorableUniqueIdentifier } from "memorable-unique-identifier";
 const result = MemorableUniqueIdentifier.create(6);
 
 console.error(result);
+
+// Example result output (your result will vary)
+//
+// {
+//  length: 6,
+//  pretty: 'Sma Eel',
+//  key: '1ed2798ec3f5d61270629ab6ad14f7e8',
+//  hash: '53aee16014b2829688c2907ae010f90b'
+// }
 ```
 
 ## API
